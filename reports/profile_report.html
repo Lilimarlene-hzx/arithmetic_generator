@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Arithmetic Generator Profile Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f6f8fa; color: #1f2328; }
+    h1 { color: #0969da; }
+    .meta { background: #ffffff; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #d0d7de; border-radius: 8px; overflow: hidden; }
+    th, td { border-bottom: 1px solid #d8dee4; padding: 10px 12px; text-align: left; }
+    th { background: #f6f8fa; }
+    tr:hover { background: #f6f8fa; }
+    .badge { display: inline-block; background: #ddf4ff; color: #0969da; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Arithmetic Generator Profile Report</h1>
+  <div class="meta">
+    <p><strong>Profile file:</strong> reports/before_opt.prof</p>
+    <p><strong>Random seed:</strong> 50</p>
+    <p><strong>Configuration:</strong> main.py -n 10000 -r 10 --seed 50</p>
+    <p><span class="badge">Top 30 by cumulative time</span></p>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Function</th>
+        <th>Primitive Calls</th>
+        <th>Total Time (s)</th>
+        <th>Cumulative Time (s)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>~:0(&lt;built-in method builtins.exec&gt;)</td><td>28</td><td>0.003055</td><td>2.388803</td></tr><tr><td>main.py:1(&lt;module&gt;)</td><td>1</td><td>0.000015</td><td>2.388798</td></tr><tr><td>main.py:20(main)</td><td>1</td><td>0.004018</td><td>2.375401</td></tr><tr><td>E:\Desktop\arithmetic_generator\generator.py:30(generate_questions)</td><td>1</td><td>0.070194</td><td>2.339345</td></tr><tr><td>E:\Desktop\arithmetic_generator\generator.py:20(_candidate)</td><td>130804</td><td>0.077775</td><td>0.804903</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:155(parse_expression)</td><td>15340</td><td>0.016093</td><td>0.693281</td></tr><tr><td>E:\Desktop\arithmetic_generator\generator.py:12(_leaf)</td><td>78482</td><td>0.085851</td><td>0.527256</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:123(parse)</td><td>15340</td><td>0.007277</td><td>0.503441</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:129(parse_additive)</td><td>19652</td><td>0.022089</td><td>0.492399</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:136(parse_multiplicative)</td><td>33790</td><td>0.031362</td><td>0.452912</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\fractions.py:206(__new__)</td><td>299222</td><td>0.218155</td><td>0.403983</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:143(parse_primary)</td><td>47541</td><td>0.049783</td><td>0.394781</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:22(number)</td><td>121711</td><td>0.096245</td><td>0.376934</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:54(valid_constraints)</td><td>196652</td><td>0.114381</td><td>0.341649</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\random.py:294(randrange)</td><td>180483</td><td>0.084594</td><td>0.237383</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:34(evaluate)</td><td>270872</td><td>0.085229</td><td>0.217318</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:65(text)</td><td>75082</td><td>0.047689</td><td>0.184803</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:92(__init__)</td><td>15340</td><td>0.014483</td><td>0.171129</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\random.py:245(_randbelow_with_getrandbits)</td><td>232805</td><td>0.105448</td><td>0.170688</td></tr><tr><td>E:\Desktop\arithmetic_generator\fraction_utils.py:22(format_fraction)</td><td>55800</td><td>0.059550</td><td>0.169183</td></tr><tr><td>~:0(&lt;built-in method builtins.isinstance&gt;)</td><td>313997</td><td>0.075341</td><td>0.149439</td></tr><tr><td>E:\Desktop\arithmetic_generator\fraction_utils.py:7(parse_number)</td><td>43229</td><td>0.055601</td><td>0.145604</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:97(_combine_number_tokens)</td><td>15340</td><td>0.071972</td><td>0.113108</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\fractions.py:697(forward)</td><td>58341</td><td>0.026345</td><td>0.111622</td></tr><tr><td>&lt;string&gt;:2(__init__)</td><td>201922</td><td>0.107829</td><td>0.107829</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:81(canonical_key)</td><td>71090</td><td>0.045226</td><td>0.086631</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:26(operation)</td><td>80211</td><td>0.042569</td><td>0.085621</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\random.py:347(choice)</td><td>52322</td><td>0.028690</td><td>0.080875</td></tr><tr><td>&lt;frozen abc&gt;:117(__instancecheck__)</td><td>208027</td><td>0.040140</td><td>0.074097</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:113(current)</td><td>223954</td><td>0.046274</td><td>0.062071</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

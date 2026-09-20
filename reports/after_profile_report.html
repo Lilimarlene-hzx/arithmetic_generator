@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Arithmetic Generator After Optimization Profile</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f6f8fa; color: #1f2328; }
+    h1 { color: #1a7f37; }
+    .meta { background: #ffffff; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #d0d7de; border-radius: 8px; overflow: hidden; }
+    th, td { border-bottom: 1px solid #d8dee4; padding: 10px 12px; text-align: left; }
+    th { background: #f6f8fa; }
+    tr:hover { background: #f6f8fa; }
+    .badge { display: inline-block; background: #dafbe1; color: #1a7f37; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Arithmetic Generator After Optimization Profile</h1>
+  <div class="meta">
+    <p><strong>Profile file:</strong> reports/after_opt.prof</p>
+    <p><strong>Random seed:</strong> 50</p>
+    <p><strong>Configuration:</strong> main.py -n 10000 -r 10 --seed 50</p>
+    <p><span class="badge">Top 30 by cumulative time</span></p>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Function</th>
+        <th>Primitive Calls</th>
+        <th>Total Time (s)</th>
+        <th>Cumulative Time (s)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>~:0(&lt;built-in method builtins.exec&gt;)</td><td>28</td><td>0.002912</td><td>1.452620</td></tr><tr><td>main.py:1(&lt;module&gt;)</td><td>1</td><td>0.000011</td><td>1.452616</td></tr><tr><td>main.py:20(main)</td><td>1</td><td>0.002510</td><td>1.437752</td></tr><tr><td>E:\Desktop\arithmetic_generator\generator.py:30(generate_questions)</td><td>1</td><td>0.051587</td><td>1.405961</td></tr><tr><td>E:\Desktop\arithmetic_generator\generator.py:20(_candidate)</td><td>130829</td><td>0.071135</td><td>0.755292</td></tr><tr><td>E:\Desktop\arithmetic_generator\generator.py:12(_leaf)</td><td>78497</td><td>0.079143</td><td>0.497468</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\fractions.py:206(__new__)</td><td>212805</td><td>0.144236</td><td>0.273057</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:22(number)</td><td>78497</td><td>0.059384</td><td>0.230568</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\random.py:294(randrange)</td><td>180518</td><td>0.079409</td><td>0.220844</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:54(valid_constraints)</td><td>125561</td><td>0.069736</td><td>0.203040</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:65(text)</td><td>75100</td><td>0.042909</td><td>0.171264</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\random.py:245(_randbelow_with_getrandbits)</td><td>232850</td><td>0.097383</td><td>0.156600</td></tr><tr><td>E:\Desktop\arithmetic_generator\fraction_utils.py:22(format_fraction)</td><td>55811</td><td>0.053788</td><td>0.156548</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:34(evaluate)</td><td>184532</td><td>0.059371</td><td>0.150490</td></tr><tr><td>~:0(&lt;built-in method builtins.isinstance&gt;)</td><td>200461</td><td>0.046890</td><td>0.097962</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:81(canonical_key)</td><td>71136</td><td>0.043008</td><td>0.078301</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\fractions.py:697(forward)</td><td>43048</td><td>0.018808</td><td>0.077725</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\random.py:347(choice)</td><td>52332</td><td>0.027065</td><td>0.074980</td></tr><tr><td>&lt;string&gt;:2(__init__)</td><td>130829</td><td>0.071518</td><td>0.071518</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:26(operation)</td><td>52332</td><td>0.025325</td><td>0.053070</td></tr><tr><td>&lt;frozen abc&gt;:117(__instancecheck__)</td><td>155499</td><td>0.027373</td><td>0.051072</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\fractions.py:1043(__lt__)</td><td>21191</td><td>0.006045</td><td>0.038621</td></tr><tr><td>~:0(&lt;method &#x27;getrandbits&#x27; of &#x27;_random.Random&#x27; objects&gt;)</td><td>407834</td><td>0.036975</td><td>0.036975</td></tr><tr><td>~:0(&lt;built-in method __new__ of type object at 0x00007ff889e653c0&gt;)</td><td>255939</td><td>0.033057</td><td>0.033319</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\fractions.py:1021(_richcmp)</td><td>21191</td><td>0.014045</td><td>0.032575</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:30(is_number)</td><td>456329</td><td>0.032396</td><td>0.032396</td></tr><tr><td>&lt;frozen importlib._bootstrap&gt;:1360(_find_and_load)</td><td>31</td><td>0.000125</td><td>0.030602</td></tr><tr><td>&lt;frozen importlib._bootstrap&gt;:1308(_find_and_load_unlocked)</td><td>31</td><td>0.000067</td><td>0.030428</td></tr><tr><td>&lt;frozen importlib._bootstrap&gt;:914(_load_unlocked)</td><td>29</td><td>0.000082</td><td>0.029231</td></tr><tr><td>&lt;frozen importlib._bootstrap_external&gt;:757(exec_module)</td><td>20</td><td>0.000070</td><td>0.029083</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

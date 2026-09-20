@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Function Relationship Diagram</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f6f8fa; color: #1f2328; }
+    h1 { color: #1f4e79; }
+    .panel { background: white; border: 1px solid #dfe4ec; border-radius: 12px; padding: 18px; }
+    svg { width: 100%; height: 820px; border: 1px solid #dfe4ec; border-radius: 10px; background: #fafcff; }
+    .node { fill: #dbeafe; stroke: #2563eb; stroke-width: 1.5; rx: 10; }
+    .label { font-size: 12px; fill: #111827; dominant-baseline: middle; text-anchor: middle; }
+    .edge { fill: none; stroke: #475569; stroke-width: 1.5; stroke-linecap: round; }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <h1>Function Relationship Diagram</h1>
+    <svg viewBox="0 0 980 820" xmlns="http://www.w3.org/2000/svg">
+      <rect class="node" x="-40" y="82" width="180" height="36" rx="10" /> <text class="label" x="50" y="100">main.py::main</text><rect class="node" x="150" y="82" width="180" height="36" rx="10" /> <text class="label" x="240" y="100">generator.py::generate_questions</text><rect class="node" x="410" y="62" width="180" height="36" rx="10" /> <text class="label" x="500" y="80">expression.py::Expression.valid_constraints</text><rect class="node" x="410" y="162" width="180" height="36" rx="10" /> <text class="label" x="500" y="180">expression.py::Expression.canonical_key</text><rect class="node" x="410" y="242" width="180" height="36" rx="10" /> <text class="label" x="500" y="260">expression.py::Expression.text</text><rect class="node" x="410" y="322" width="180" height="36" rx="10" /> <text class="label" x="500" y="340">expression.py::Expression.evaluate</text><rect class="node" x="670" y="182" width="180" height="36" rx="10" /> <text class="label" x="760" y="200">fraction_utils.py::format_fraction</text><rect class="node" x="150" y="242" width="180" height="36" rx="10" /> <text class="label" x="240" y="260">grader.py::grade</text><rect class="node" x="410" y="402" width="180" height="36" rx="10" /> <text class="label" x="500" y="420">expression.py::parse_expression</text><rect class="node" x="670" y="402" width="180" height="36" rx="10" /> <text class="label" x="760" y="420">fraction_utils.py::parse_number</text><rect class="node" x="670" y="482" width="180" height="36" rx="10" /> <text class="label" x="760" y="500">expression.py::_Parser.parse</text><rect class="node" x="670" y="562" width="180" height="36" rx="10" /> <text class="label" x="760" y="580">expression.py::_Parser.parse_additive</text><rect class="node" x="670" y="642" width="180" height="36" rx="10" /> <text class="label" x="760" y="660">expression.py::_Parser.parse_multiplicative</text><rect class="node" x="670" y="722" width="180" height="36" rx="10" /> <text class="label" x="760" y="740">expression.py::_Parser.parse_primary</text>
+      <path d="M 50 100 C 145.0 100, 145.0 100, 240 100" class="edge" /><path d="M 240 100 C 370.0 100, 370.0 80, 500 80" class="edge" /><path d="M 240 100 C 370.0 100, 370.0 180, 500 180" class="edge" /><path d="M 240 100 C 370.0 100, 370.0 260, 500 260" class="edge" /><path d="M 240 100 C 370.0 100, 370.0 340, 500 340" class="edge" /><path d="M 240 100 C 500.0 100, 500.0 200, 760 200" class="edge" /><path d="M 50 100 C 145.0 100, 145.0 260, 240 260" class="edge" /><path d="M 240 260 C 370.0 260, 370.0 420, 500 420" class="edge" /><path d="M 240 260 C 500.0 260, 500.0 420, 760 420" class="edge" /><path d="M 500 340 C 630.0 340, 630.0 200, 760 200" class="edge" /><path d="M 500 80 C 500.0 80, 500.0 340, 500 340" class="edge" /><path d="M 500 180 C 500.0 180, 500.0 180, 500 180" class="edge" /><path d="M 500 420 C 630.0 420, 630.0 500, 760 500" class="edge" /><path d="M 760 500 C 760.0 500, 760.0 580, 760 580" class="edge" /><path d="M 760 580 C 760.0 580, 760.0 660, 760 660" class="edge" /><path d="M 760 660 C 760.0 660, 760.0 740, 760 740" class="edge" /><path d="M 760 740 C 760.0 740, 760.0 420, 760 420" class="edge" />
+    </svg>
+  </div>
+</body>
+</html>

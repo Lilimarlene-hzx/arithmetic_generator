@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Performance comparison before vs after</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f5f7fb; color: #1f2328; }
+    h1 { font-size: 26px; color: #1f4e79; }
+    .panel { background: white; border: 1px solid #dfe4ec; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border-bottom: 1px solid #e5e7eb; padding: 10px 8px; text-align: left; }
+    th { background: #f7f9fc; }
+    .good { color: #1a7f37; font-weight: bold; }
+    .bad { color: #b42318; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <h1>Performance Comparison: Before vs After Optimization</h1>
+    <svg width="980" height="420" viewBox="0 0 980 420">
+      <line x1="40" y1="300" x2="900" y2="300" stroke="#555" stroke-width="1" />
+      <line x1="40" y1="20" x2="40" y2="300" stroke="#555" stroke-width="1" />
+      
+  <g>
+    <rect x="20" y="10" width="18" height="12" fill="#d9485f" />
+    <text x="45" y="21" font-size="12">Before</text>
+    <rect x="120" y="10" width="18" height="12" fill="#2c9c69" />
+    <text x="145" y="21" font-size="12">After</text>
+  </g>
+
+      
+      <g transform="translate(20, 0)">
+        <text x="20" y="330" font-size="11" transform="rotate(20 20 330)">~:0(&lt;built-in meth</text>
+        <rect x="0" y="-220.0" width="35" height="520.0" fill="#d9485f" />
+        <rect x="45" y="-46.01681260447185" width="35" height="346.01681260447185" fill="#2c9c69" />
+        <text x="15" y="-230.0" font-size="10" fill="#333">2.39</text>
+        <text x="60" y="-56.01681260447185" font-size="10" fill="#333">1.59</text>
+      </g>
+      <g transform="translate(170, 0)">
+        <text x="20" y="330" font-size="11" transform="rotate(20 20 330)">main.py:1(&lt;module&gt;</text>
+        <rect x="0" y="-219.99891158877483" width="35" height="519.9989115887748" fill="#d9485f" />
+        <rect x="45" y="-46.01594187549165" width="35" height="346.01594187549165" fill="#2c9c69" />
+        <text x="15" y="-229.99891158877483" font-size="10" fill="#333">2.39</text>
+        <text x="60" y="-56.01594187549165" font-size="10" fill="#333">1.59</text>
+      </g>
+      <g transform="translate(320, 0)">
+        <text x="20" y="330" font-size="11" transform="rotate(20 20 330)">main.py:20(main)</text>
+        <rect x="0" y="-217.0826225519644" width="35" height="517.0826225519644" fill="#d9485f" />
+        <rect x="45" y="-43.17475321322024" width="35" height="343.17475321322024" fill="#2c9c69" />
+        <text x="15" y="-227.0826225519644" font-size="10" fill="#333">2.38</text>
+        <text x="60" y="-53.17475321322024" font-size="10" fill="#333">1.58</text>
+      </g>
+      <g transform="translate(470, 0)">
+        <text x="20" y="330" font-size="11" transform="rotate(20 20 330)">E:\Desktop\arithme</text>
+        <rect x="0" y="-209.23387152477625" width="35" height="509.23387152477625" fill="#d9485f" />
+        <rect x="45" y="-35.739816133854504" width="35" height="335.7398161338545" fill="#2c9c69" />
+        <text x="15" y="-219.23387152477625" font-size="10" fill="#333">2.34</text>
+        <text x="60" y="-45.739816133854504" font-size="10" fill="#333">1.54</text>
+      </g>
+      <g transform="translate(620, 0)">
+        <text x="20" y="330" font-size="11" transform="rotate(20 20 330)">E:\Desktop\arithme</text>
+        <rect x="0" y="124.7869079199917" width="35" height="175.2130920800083" fill="#d9485f" />
+        <rect x="45" y="128.63879524598718" width="35" height="171.36120475401282" fill="#2c9c69" />
+        <text x="15" y="114.7869079199917" font-size="10" fill="#333">0.80</text>
+        <text x="60" y="118.63879524598718" font-size="10" fill="#333">0.79</text>
+      </g>
+      <g transform="translate(770, 0)">
+        <text x="20" y="330" font-size="11" transform="rotate(20 20 330)">E:\Desktop\arithme</text>
+        <rect x="0" y="149.08503547592662" width="35" height="150.91496452407338" fill="#d9485f" />
+        <rect x="45" y="300.0" width="35" height="0.0" fill="#2c9c69" />
+        <text x="15" y="139.08503547592662" font-size="10" fill="#333">0.69</text>
+        <text x="60" y="290.0" font-size="10" fill="#333">0.00</text>
+      </g>
+      <g transform="translate(920, 0)">
+        <text x="20" y="330" font-size="11" transform="rotate(20 20 330)">E:\Desktop\arithme</text>
+        <rect x="0" y="185.22573020881168" width="35" height="114.77426979118832" fill="#d9485f" />
+        <rect x="45" y="187.1992374423508" width="35" height="112.8007625576492" fill="#2c9c69" />
+        <text x="15" y="175.22573020881168" font-size="10" fill="#333">0.53</text>
+        <text x="60" y="177.1992374423508" font-size="10" fill="#333">0.52</text>
+      </g>
+      <g transform="translate(1070, 0)">
+        <text x="20" y="330" font-size="11" transform="rotate(20 20 330)">E:\Desktop\arithme</text>
+        <rect x="0" y="190.40983287445636" width="35" height="109.59016712554366" fill="#d9485f" />
+        <rect x="45" y="300.0" width="35" height="0.0" fill="#2c9c69" />
+        <text x="15" y="180.40983287445636" font-size="10" fill="#333">0.50</text>
+        <text x="60" y="290.0" font-size="10" fill="#333">0.00</text>
+      </g>
+      <g transform="translate(1220, 0)">
+        <text x="20" y="330" font-size="11" transform="rotate(20 20 330)">E:\msys64\ucrt64\l</text>
+        <rect x="0" y="300.0" width="35" height="0.0" fill="#d9485f" />
+        <rect x="45" y="237.35975716708325" width="35" height="62.64024283291675" fill="#2c9c69" />
+        <text x="15" y="290.0" font-size="10" fill="#333">0.00</text>
+        <text x="60" y="227.35975716708325" font-size="10" fill="#333">0.29</text>
+      </g>
+      <g transform="translate(1370, 0)">
+        <text x="20" y="330" font-size="11" transform="rotate(20 20 330)">E:\Desktop\arithme</text>
+        <rect x="0" y="300.0" width="35" height="0.0" fill="#d9485f" />
+        <rect x="45" y="237.59724849642268" width="35" height="62.40275150357733" fill="#2c9c69" />
+        <text x="15" y="290.0" font-size="10" fill="#333">0.00</text>
+        <text x="60" y="227.59724849642268" font-size="10" fill="#333">0.29</text>
+      </g>
+      <text x="20" y="170" font-size="12" transform="rotate(-90 20 170)">Cumulative time (s)</text>
+    </svg>
+  </div>
+
+  <div class="panel" style="margin-top:20px;">
+    <h2>Top hotspot functions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Function</th>
+          <th>Before (s)</th>
+          <th>After (s)</th>
+          <th>Improvement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>~:0(&lt;built-in method builtins.exec&gt;)</td><td>2.389</td><td>1.590</td><td class="good">0.799</td></tr><tr><td>main.py:1(&lt;module&gt;)</td><td>2.389</td><td>1.590</td><td class="good">0.799</td></tr><tr><td>main.py:20(main)</td><td>2.375</td><td>1.576</td><td class="good">0.799</td></tr><tr><td>E:\Desktop\arithmetic_generator\generator.py:30(generate_questions)</td><td>2.339</td><td>1.542</td><td class="good">0.797</td></tr><tr><td>E:\Desktop\arithmetic_generator\generator.py:20(_candidate)</td><td>0.805</td><td>0.787</td><td class="good">0.018</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:155(parse_expression)</td><td>0.693</td><td>0.000</td><td class="good">0.693</td></tr><tr><td>E:\Desktop\arithmetic_generator\generator.py:12(_leaf)</td><td>0.527</td><td>0.518</td><td class="good">0.009</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:123(parse)</td><td>0.503</td><td>0.000</td><td class="good">0.503</td></tr><tr><td>E:\msys64\ucrt64\lib\python3.14\fractions.py:206(__new__)</td><td>0.000</td><td>0.288</td><td class="bad">-0.288</td></tr><tr><td>E:\Desktop\arithmetic_generator\expression.py:60(valid_constraints)</td><td>0.000</td><td>0.287</td><td class="bad">-0.287</td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

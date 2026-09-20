@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Before vs After Profile Comparison</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f6f8fa; color: #1f2328; }
+    h1 { color: #0a3069; }
+    .meta { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #d0d7de; }
+    th, td { border-bottom: 1px solid #d8dee4; padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: #f6f8fa; }
+    tr:hover { background: #f6f8fa; }
+    .good { color: #1a7f37; font-weight: bold; }
+    .bad { color: #cf222e; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Before vs After Profile Comparison</h1>
+  <div class="meta">
+    <p><strong>Before:</strong> reports/before_opt.prof</p>
+    <p><strong>After:</strong> reports/after_opt.prof</p>
+    <p><strong>Seed:</strong> 50</p>
+    <p><strong>Mode:</strong> main.py -n 10000 -r 10 --seed 50</p>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Function</th>
+        <th>Before Total (s)</th>
+        <th>After Total (s)</th>
+        <th>Delta Total (s)</th>
+        <th>Before Cum (s)</th>
+        <th>After Cum (s)</th>
+        <th>Delta Cum (s)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+  <td>~:0(&lt;built-in method builtins.exec&gt;)</td>
+  <td>0.003055</td>
+  <td>0.002912</td>
+  <td>-0.000143</td>
+  <td>2.388803</td>
+  <td>1.452620</td>
+  <td>-0.936183</td>
+</tr>
+<tr>
+  <td>main.py:1(&lt;module&gt;)</td>
+  <td>0.000015</td>
+  <td>0.000011</td>
+  <td>-0.000004</td>
+  <td>2.388798</td>
+  <td>1.452616</td>
+  <td>-0.936182</td>
+</tr>
+<tr>
+  <td>main.py:20(main)</td>
+  <td>0.004018</td>
+  <td>0.002510</td>
+  <td>-0.001508</td>
+  <td>2.375401</td>
+  <td>1.437752</td>
+  <td>-0.937649</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\generator.py:30(generate_questions)</td>
+  <td>0.070194</td>
+  <td>0.051587</td>
+  <td>-0.018607</td>
+  <td>2.339345</td>
+  <td>1.405961</td>
+  <td>-0.933384</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\generator.py:20(_candidate)</td>
+  <td>0.077775</td>
+  <td>0.071135</td>
+  <td>-0.006640</td>
+  <td>0.804903</td>
+  <td>0.755292</td>
+  <td>-0.049611</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\expression.py:155(parse_expression)</td>
+  <td>0.016093</td>
+  <td>0.000000</td>
+  <td>-0.016093</td>
+  <td>0.693281</td>
+  <td>0.000000</td>
+  <td>-0.693281</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\generator.py:12(_leaf)</td>
+  <td>0.085851</td>
+  <td>0.079143</td>
+  <td>-0.006708</td>
+  <td>0.527256</td>
+  <td>0.497468</td>
+  <td>-0.029788</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\expression.py:123(parse)</td>
+  <td>0.007277</td>
+  <td>0.000000</td>
+  <td>-0.007277</td>
+  <td>0.503441</td>
+  <td>0.000000</td>
+  <td>-0.503441</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\expression.py:129(parse_additive)</td>
+  <td>0.022089</td>
+  <td>0.000000</td>
+  <td>-0.022089</td>
+  <td>0.492399</td>
+  <td>0.000000</td>
+  <td>-0.492399</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\expression.py:136(parse_multiplicative)</td>
+  <td>0.031362</td>
+  <td>0.000000</td>
+  <td>-0.031362</td>
+  <td>0.452912</td>
+  <td>0.000000</td>
+  <td>-0.452912</td>
+</tr>
+<tr>
+  <td>E:\msys64\ucrt64\lib\python3.14\fractions.py:206(__new__)</td>
+  <td>0.218155</td>
+  <td>0.144236</td>
+  <td>-0.073919</td>
+  <td>0.403983</td>
+  <td>0.273057</td>
+  <td>-0.130926</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\expression.py:143(parse_primary)</td>
+  <td>0.049783</td>
+  <td>0.000000</td>
+  <td>-0.049783</td>
+  <td>0.394781</td>
+  <td>0.000000</td>
+  <td>-0.394781</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\expression.py:22(number)</td>
+  <td>0.096245</td>
+  <td>0.059384</td>
+  <td>-0.036861</td>
+  <td>0.376934</td>
+  <td>0.230568</td>
+  <td>-0.146366</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\expression.py:54(valid_constraints)</td>
+  <td>0.114381</td>
+  <td>0.069736</td>
+  <td>-0.044645</td>
+  <td>0.341649</td>
+  <td>0.203040</td>
+  <td>-0.138609</td>
+</tr>
+<tr>
+  <td>E:\msys64\ucrt64\lib\python3.14\random.py:294(randrange)</td>
+  <td>0.084594</td>
+  <td>0.079409</td>
+  <td>-0.005185</td>
+  <td>0.237383</td>
+  <td>0.220844</td>
+  <td>-0.016539</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\expression.py:34(evaluate)</td>
+  <td>0.085229</td>
+  <td>0.059371</td>
+  <td>-0.025858</td>
+  <td>0.217318</td>
+  <td>0.150490</td>
+  <td>-0.066828</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\expression.py:65(text)</td>
+  <td>0.047689</td>
+  <td>0.042909</td>
+  <td>-0.004780</td>
+  <td>0.184803</td>
+  <td>0.171264</td>
+  <td>-0.013539</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\expression.py:92(__init__)</td>
+  <td>0.014483</td>
+  <td>0.000000</td>
+  <td>-0.014483</td>
+  <td>0.171129</td>
+  <td>0.000000</td>
+  <td>-0.171129</td>
+</tr>
+<tr>
+  <td>E:\msys64\ucrt64\lib\python3.14\random.py:245(_randbelow_with_getrandbits)</td>
+  <td>0.105448</td>
+  <td>0.097383</td>
+  <td>-0.008065</td>
+  <td>0.170688</td>
+  <td>0.156600</td>
+  <td>-0.014088</td>
+</tr>
+<tr>
+  <td>E:\Desktop\arithmetic_generator\fraction_utils.py:22(format_fraction)</td>
+  <td>0.059550</td>
+  <td>0.053788</td>
+  <td>-0.005762</td>
+  <td>0.169183</td>
+  <td>0.156548</td>
+  <td>-0.012635</td>
+</tr>
+
+    </tbody>
+  </table>
+</body>
+</html>
