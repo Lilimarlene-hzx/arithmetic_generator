@@ -5,7 +5,7 @@ from __future__ import annotations
 import random
 from fractions import Fraction
 
-from expression import Expression, parse_expression
+from expression import Expression
 from fraction_utils import format_fraction
 
 
@@ -41,14 +41,11 @@ def generate_questions(count: int, limit: int, seed: int | None = None) -> list[
 		if not expression.valid_constraints():
 			continue
 		rendered = expression.text()
-		parsed = parse_expression(rendered)
-		if not parsed.valid_constraints():
-			continue
-		key = parsed.canonical_key()
+		key = expression.canonical_key()
 		if key in keys:
 			continue
 		keys.add(key)
-		questions.append((rendered, format_fraction(parsed.evaluate())))
+		questions.append((rendered, format_fraction(expression.evaluate())))
 	if len(questions) != count:
 		raise RuntimeError("unable to generate enough distinct questions for this range")
 	return questions

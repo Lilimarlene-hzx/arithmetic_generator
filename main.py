@@ -13,6 +13,7 @@ def build_parser() -> argparse.ArgumentParser:
 	mode.add_argument("-e", help="题目文件")
 	parser.add_argument("-n", type=int, default=10, help="题目数量，默认 10")
 	parser.add_argument("-a", help="答案文件，与 -e 一起使用")
+	parser.add_argument("--seed", type=int, default=None, help="固定随机种子，便于复现生成结果和做性能测试")
 	return parser
 
 
@@ -26,7 +27,7 @@ def main() -> None:
 	if args.n < 0:
 		raise SystemExit("-n 必须是非负整数")
 	try:
-		write_questions(generate_questions(args.n, args.r))
+		write_questions(generate_questions(args.n, args.r, seed=args.seed))
 	except (ValueError, RuntimeError) as error:
 		raise SystemExit(str(error))
 
